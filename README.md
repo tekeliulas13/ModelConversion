@@ -20,7 +20,7 @@ The project follows these distinct steps:
 
 ### Python Environment
 
-- Python 3.8+
+- Python 3.10+
 - Dependencies are listed in `requirements.txt`. Install them with:
     ```bash
     pip install -r requirements.txt
@@ -35,8 +35,8 @@ The project follows these distinct steps:
 - C++17 compliant compiler (e.g., GCC, Clang)
 - CMake (version 3.14 or higher)
 - NVIDIA CUDA Toolkit
-- NVIDIA TensorRT [cite: 3]
-- OpenCV [cite: 5]
+- NVIDIA TensorRT
+- OpenCV
 
 ---
 
@@ -47,7 +47,7 @@ Follow these steps to run the pipeline from ONNX export to C++ inference.
 ### Step 1: Clone the Repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/tekeliulas13/ModelConversion
 cd ModelConversion
 ```
 
@@ -78,11 +78,10 @@ Use CMake to build the C++ executable:
 mkdir build && cd build
 
 # Configure the project with CMake.
-# You MUST point this to your TensorRT installation directory. [cite: 3]
-cmake .. -DTENSORRT_DIR=/path/to/your/tensorrt
+cmake ..
 
 # Build the project
-cmake --build .
+make -j$(nproc)
 ```
 
 This will create an executable named `tensorrt_infer` inside the `build` directory.
