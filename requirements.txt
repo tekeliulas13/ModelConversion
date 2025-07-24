@@ -1,0 +1,9 @@
+torch>=1.10
+torchvision>=0.11
+numpy
+opencv-python
+tqdm
+tvm==0.11.1
+onnx
+# For TVM Python API (if not installed via pip, use official instructions)
+# For C++: cmake, gcc, etc. (not included here)

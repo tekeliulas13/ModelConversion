@@ -1,0 +1,2 @@
+The predicted class index is: 0
+Average inference time over 100 runs: 91.7218 ms
