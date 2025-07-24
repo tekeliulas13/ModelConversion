@@ -7,7 +7,7 @@ from tvm.contrib import graph_executor
 # Load ResNet50 and modify final layer for 102 classes
 model = torchvision.models.resnet50(pretrained=False)
 model.fc = torch.nn.Linear(model.fc.in_features, 102)
-model.load_state_dict(torch.load("/home/syntonym/workspace_ulas/ModelConversion/models/best_resnet50_flowers102.pth"))
+# model.load_state_dict(torch.load("/home/syntonym/workspace_ulas/ModelConversion/models/best_resnet50_flowers102.pth"))
 model.eval()
 
 input_shape = [1, 3, 224, 224]
